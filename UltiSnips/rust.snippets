@@ -4,6 +4,14 @@
 
 priority -50
 
+snippet drvenum "#[derive(Debug, Copy, Clone, Eq, PartialEq)] pub enum"
+#[derive(Debug, Copy, Clone, Eq, PartialEq)]
+pub enum ${1:enum_name} ${3/..*/ -> /}$3 {
+	${VISUAL}$0
+}
+
+endsnippet
+
 snippet fn "fn name(?) -> ? {}"
 fn ${1:function_name}($2)${3/..*/ -> /}$3 {
 	${VISUAL}$0
